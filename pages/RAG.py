@@ -218,10 +218,6 @@ def generate_knowledge_base():
 # 세션 상태 초기화
 init_session_state()
 
-# 메인 레이아웃
-# col1, col2 = st.columns([1, 2])
-
-# 좌측 컬럼 - 파일 업로드 및 지식 생성 (사이드바로 이동)
 with st.sidebar:
     st.header("📁 파일 업로드")
 

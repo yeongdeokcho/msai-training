@@ -35,12 +35,6 @@ class AzureClients:
             credential=self.search_key_credential,
         )
 
-        # Storage 클라이언트
-        # self.blob_client = BlobServiceClient(
-        #     account_url=f"https://{self.config.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net",
-        #     credential=self.credential,
-        # )
-
         self.blob_client = BlobServiceClient.from_connection_string(
             self.config.AZURE_STORAGE_CONNECTION_STRING
         )
