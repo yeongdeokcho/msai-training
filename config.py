@@ -1,0 +1,36 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Config:
+    # Azure 설정
+    AZURE_SUBSCRIPTION_ID = os.getenv('AZURE_SUBSCRIPTION_ID')
+    AZURE_RESOURCE_GROUP = os.getenv('AZURE_RESOURCE_GROUP')
+    AZURE_LOCATION = os.getenv('AZURE_LOCATION')
+    
+    # Azure AI Search 설정
+    AZURE_SEARCH_SERVICE_NAME = os.getenv('AZURE_SEARCH_SERVICE_NAME') 
+    AZURE_SEARCH_ADMIN_KEY = os.getenv('AZURE_SEARCH_ADMIN_KEY')
+    AZURE_SEARCH_ENDPOINT = f"https://{AZURE_SEARCH_SERVICE_NAME}.search.windows.net"
+    AZURE_SEARCH_INDEX_NAME = os.getenv('AZURE_SEARCH_INDEX_NAME')
+    
+    # Azure OpenAI 설정
+    AZURE_OPENAI_ENDPOINT = os.getenv('AZURE_OPENAI_ENDPOINT')
+    AZURE_OPENAI_API_KEY = os.getenv('AZURE_OPENAI_API_KEY')
+    AZURE_OPENAI_API_VERSION = os.getenv('AZURE_OPENAI_API_VERSION')
+    AZURE_OPENAI_EMBEDDING_MODEL = os.getenv('AZURE_OPENAI_EMBEDDING_MODEL') 
+    AZURE_OPENAI_CHAT_MODEL = os.getenv('AZURE_OPENAI_CHAT_MODEL') 
+    
+    # Azure Storage 설정
+    AZURE_STORAGE_ACCOUNT_NAME = os.getenv('AZURE_STORAGE_ACCOUNT_NAME') 
+    AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+    AZURE_STORAGE_CONTAINER_NAME = os.getenv('AZURE_STORAGE_CONTAINER_NAME')
+    AZURE_STORAGE_KEY = os.getenv('AZURE_STORAGE_KEY')
+ 
+    
+    # 애플리케이션 설정
+    UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER')
+    ALLOWED_EXTENSIONS = os.getenv('ALLOWED_EXTENSIONS')
+    # ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'md'}  
+    
