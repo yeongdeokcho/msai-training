@@ -125,7 +125,7 @@ class IncidentChatbot:
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.2,
-                max_tokens=1000,
+                max_tokens=4096,
             )
 
             answer = response.choices[0].message.content
